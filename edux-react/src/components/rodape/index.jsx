@@ -16,8 +16,10 @@ const Rodape = () => {
                             <h5>Inicio</h5>
                             <ul>
                                 <li><a>Home</a></li>
-                                <li><a>Curso</a></li>
-                                <li><a>Turma</a></li>
+                                <li><a>Conquistas</a></li>
+                                <li><a>Objetivos</a></li>
+                                <li><a>TimeLine</a></li>
+                                <li><a>Dicas</a></li>
                             </ul>
                         </div>
                         <div class="col-sm-2">
