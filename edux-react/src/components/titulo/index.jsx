@@ -6,7 +6,7 @@ import './index.css';
 const Titulo = ({titulo, chamada}) => {
 
     return (
-        <Jumbotron>
+        <Jumbotron className='text-center'>
             <h1>{titulo}</h1>
             <p>
                 {chamada}

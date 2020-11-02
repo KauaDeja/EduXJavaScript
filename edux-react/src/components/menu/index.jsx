@@ -7,6 +7,7 @@ import { Nav, Navbar } from 'react-bootstrap';
 
 const Menu = () => {
     return (
+        <div id="myMenu">
         <Navbar collapseOnSelect expand="lg" variant= "dark">
             <img src={logo} style={{width: '100px'}} alt="Logo EduX" />
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -24,6 +25,7 @@ const Menu = () => {
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
+        </div>
     )
 
     

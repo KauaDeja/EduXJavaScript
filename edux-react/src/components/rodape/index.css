@@ -1,14 +1,17 @@
 #myFooter {
-    background-color: rgb(56, 1, 56);
+    background-color: rgb(19, 1, 56);
     color: white;
-    padding-top: 30px;
 }
 
 #myFooter .footer-copyright {
-    background-color: #31233a;
+    background-color: #191970;
     padding-top: 3px;
     padding-bottom: 3px;
     text-align: center;
+}
+
+#myFooter small{
+    font-weight: bold;
 }
 
 #myFooter .row {
@@ -17,7 +20,7 @@
 
 #myFooter .navbar-brand {
     margin-top: 45px;
-    height: 65px;
+    height: 40px;
 }
 
 #myFooter .footer-copyright p {
