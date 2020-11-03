@@ -2,9 +2,4 @@
     .navbar {
         background-color: rgb(19, 1, 56) !important;
     }
-    #myMenu{
-        position: -webkit-sticky; /* Necessário para funcionar no Safari */
-        position: sticky;
-        top: 0;
-    }
 }
