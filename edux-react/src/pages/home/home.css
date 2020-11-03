@@ -1,0 +1,21 @@
+.Sobre{
+    display: flex;
+    justify-content: center;
+    margin: 100px auto;
+}
+
+.Sobre h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.texto{
+    width: 70%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.nos{
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+}
