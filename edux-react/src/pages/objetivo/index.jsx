@@ -7,6 +7,11 @@ import Rodape from '../../components/rodape/';
 import './index.css'
 
 const Objetivo = () =>{
+
+    fetch('https://localhost:44305/api/Objetivo , https://localhost:44305/api/ObjetivoAluno',{
+        method:'POST'
+
+    })
     return(
         <div >
             <Menu />
