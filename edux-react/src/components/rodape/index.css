@@ -5,7 +5,7 @@
 }
 
 #myFooter .footer-copyright {
-    background-color: #31233a;
+    background-color:rgba(71, 3, 57, 0.856);
     padding-top: 3px;
     padding-bottom: 3px;
     text-align: center;
@@ -58,7 +58,7 @@
 
 #myFooter .btn {
     color: white;
-    background-color: #d84b6b;
+    background-color: green;
     border-radius: 20px;
     border: none;
     width: 150px;
@@ -71,6 +71,7 @@
 @media screen and (max-width: 767px) {
     #myFooter {
         text-align: center;
+
     }
 }
 

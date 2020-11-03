@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Curso from './pages/curso';
+import Login from './pages/login';
 import reportWebVitals from './reportWebVitals';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Curso />
+    <Login />
   </React.StrictMode>,
   document.getElementById('root')
 );
