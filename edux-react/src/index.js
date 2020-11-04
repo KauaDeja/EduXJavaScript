@@ -4,6 +4,8 @@ import './index.css';
 import Curso from './pages/curso';
 import Login from './pages/login';
 import Cadastrar from './pages/cadastrar';
+import Categoria from './pages/categoria';
+import Instituicao from './pages/instituicao';
 import DashBoard from './pages/professor/dashboard';
 import reportWebVitals from './reportWebVitals';
 import jwt_decode from 'jwt-decode';
