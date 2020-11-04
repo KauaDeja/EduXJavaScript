@@ -3,14 +3,72 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Curso from './pages/curso';
 import Login from './pages/login';
+import Cadastrar from './pages/cadastrar';
+import DashBoard from './pages/professor/dashboard';
 import reportWebVitals from './reportWebVitals';
+import jwt_decode from 'jwt-decode';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
+
+const RotaPrivada = ({component : Component, ...rest}) => (
+  <Route
+    {...rest}
+    render = {
+      props => 
+      localStorage.getItem('token-nyous-tarde') !== null ?
+        <Component {...props} /> :
+        <Redirect to={{pathname : '/login', state :{from : props.location}}} /> 
+    }
+  />
+);
+
+const RotaPrivadaInstituicao = ({component : Component, ...rest}) => (
+  <Route
+    {...rest}
+    render = {
+      props => 
+      localStorage.getItem('token-edux') !== null  && jwt_decode(localStorage.getItem('token-edux')).role === 'Instituicao' ?
+        <Component {...props} /> :
+        <Redirect to={{pathname : '/login', state :{from : props.location}}} /> 
+    }
+  />
+);
+
+const RotaPrivadaProfessor = ({component : Component, ...rest}) => (
+  <Route
+    {...rest}
+    render = {
+      props => 
+      localStorage.getItem('token-edux') !== null && jwt_decode(localStorage.getItem('token-edux')).role === 'Professor' ?
+        <Component {...props} /> :
+        <Redirect to={{pathname : '/login', state :{from : props.location}}} /> 
+    }
+  />
+);
+
+const routing = (
+  <Router>
+    <Switch>
+      <Route exact path= '/' component={Home} /> 
+      <Route path='/login' component={Login} />
+      <Route path='/cadastrar' component={Cadastrar} />
+
+      <RotaPrivada path='/ranking' component={Ranking} />
+      <RotaPrivada path= '/dica' component={Dica} />
+      <RotaPrivada path= '/objetivo' component={Objetivo} />
+      
+      <RotaPrivadaProfessor path='/curso' component={Curso} />
+      <RotaPrivadaProfessor path='/turma' component={Turma} />
+      <RotaPrivadaProfessor path='/categoria' component={Categoria} />
+
+      <RotaPrivadaInstituicao path='/instituicao/dashboard' component={Instituicao} />
+    </Switch>
+  </Router>
+)
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Login />
-  </React.StrictMode>,
+  routing,
   document.getElementById('root')
 );
 

@@ -58,7 +58,7 @@
 
 #myFooter .btn {
     color: white;
-    background-color: green;
+    background-color: rgba(0, 0, 255, 0.459);
     border-radius: 20px;
     border: none;
     width: 150px;
