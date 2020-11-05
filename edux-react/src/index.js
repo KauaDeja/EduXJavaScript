@@ -18,7 +18,7 @@ const RotaPrivada = ({component : Component, ...rest}) => (
     {...rest}
     render = {
       props => 
-      localStorage.getItem('token-nyous-tarde') !== null ?
+      localStorage.getItem('token-edux') !== null ?
         <Component {...props} /> :
         <Redirect to={{pathname : '/login', state :{from : props.location}}} /> 
     }
@@ -52,17 +52,15 @@ const RotaPrivadaProfessor = ({component : Component, ...rest}) => (
 const routing = (
   <Router>
     <Switch>
-      <Route exact path= '/' component={Home} /> 
+
       <Route path='/login' component={Login} />
       <Route path='/cadastrar' component={Cadastrar} />
 
-      <RotaPrivada path='/ranking' component={Ranking} />
-      <RotaPrivada path= '/dica' component={Dica} />
-      <RotaPrivada path= '/objetivo' component={Objetivo} />
+
       
       <RotaPrivadaProfessor path='/curso' component={Curso} />
-      <RotaPrivadaProfessor path='/turma' component={Turma} />
-      <RotaPrivadaProfessor path='/categoria' component={Categoria} />
+
+      <Route path='/categoria' component={Categoria} />
 
       <RotaPrivadaInstituicao path='/instituicao/dashboard' component={Instituicao} />
     </Switch>
