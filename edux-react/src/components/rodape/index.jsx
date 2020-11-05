@@ -38,7 +38,7 @@ const Rodape = () => {
                                 <li><a>Whatsapp</a></li>
                             </ul>
                         </div>
-                        <div className="button1"> <Button variant="dark" type="submit">Contato</Button></div>
+                        <div className="button1"> <Button href= "https://github.com/KauaDeja" variant="dark" type="submit">Contato</Button></div>
 
                     </div>
                 </div>

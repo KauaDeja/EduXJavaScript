@@ -1,0 +1,55 @@
+
+
+.h1 {
+    color: lavender;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.list-group-item:hover{
+    border-radius: 10px 0px 10px 0px;
+    color: white
+}
+
+
+.container{
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+.colt {
+    background-color: rgb(126, 122, 88);
+
+}
+
+table#alter tr td { /* Toda a tabela com fundo creme */
+    color: white;
+    
+    } 
+.dif{
+    color: white;
+}
+
+ #alter{
+ 
+    position: center;
+}
+
+body{
+    height: 100%;
+    margin: 0;
+}
+.bg{
+    background-repeat: no-repeat;
+    background-image: url('http://www.pinhais.pr.gov.br/seminariointernacional/wp-content/uploads/2017/08/cropped-bg_seminarioPrancheta_1.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+

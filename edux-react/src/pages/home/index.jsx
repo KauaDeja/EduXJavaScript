@@ -5,6 +5,7 @@ import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import 'react-awesome-slider/dist/styles.css'; 
 import Menu from '../../components/menu';
 import Footer from '../../components/rodape';
+import {Carousel, Jumbotron, Button, Container, Row, Col, Card} from 'react-bootstrap';
 
 //add imagens de crianças
 import img_crianca from '../../assets/img/criança.jpg'
@@ -37,6 +38,15 @@ const Home = () => {
     </div>
 
   <body>
+  <Jumbotron className="text-center">
+            <h1>Plataforma Gamificada Educacional</h1>
+            <p>
+                Encontre modelos mais educativos e divertidos para melhorar seu aprendizado
+            </p>
+            <p>
+                <Button variant='primary' href='/login'>Login</Button><Button variant="success"  href='/cadastrar' style={{ marginLeft :'40px'}}>Cadastrar</Button>
+            </p>
+        </Jumbotron>
     <h1 className="Sobre">Sobre o projeto</h1>
     
     <img className="sobre_img" src={img_crianca} alt=""/>

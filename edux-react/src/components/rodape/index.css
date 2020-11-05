@@ -1,11 +1,11 @@
 #myFooter {
-    background-color: rgb(56, 1, 56);
+    background-color:  rgb(25, 78, 102);
     color: white;
     padding-top: 30px;
 }
 
 #myFooter .footer-copyright {
-    background-color:rgba(71, 3, 57, 0.856);
+    background-color:rgb(58, 56, 56);
     padding-top: 3px;
     padding-bottom: 3px;
     text-align: center;
@@ -58,7 +58,7 @@
 
 #myFooter .btn {
     color: white;
-    background-color: green;
+    background-color: rgb(5, 94, 5);
     border-radius: 20px;
     border: none;
     width: 150px;
