@@ -12,6 +12,7 @@ const ObjetivoCRUD = () =>{
     const [aluno , setAluno] = useState('');
     const [turma , setTurma] = useState('');
     const [descricao , setDescricao] = useState('');
+    const [categoriaId , setCategoriaId] = useState('');
     const [categoria , setCategoria] = useState([]);
     const [nota , setNota] = useState('');
   
@@ -22,10 +23,10 @@ const ObjetivoCRUD = () =>{
    
    
     const listarCategorias = () =>{
-        fetch('https://localhost:44305/api/Categoria')
+        fetch('https://localhost:5001/api/Categoria')
         .then(response => response.json())
         .then(dados =>{
-            setCategoria(dados.data);
+            setCategoria(dados);
         })
     }
 
@@ -93,15 +94,14 @@ const ObjetivoCRUD = () =>{
                               <div className="form-group">
                                   <label htmlFor="Categoria"></label>
                                   
-                                  <select type="select" className="form-control" value={categoria} onChange={event => setCategoria(event.target.value)} id="Categoria">
+                                  <select type="select" className="form-control" custom value={categoriaId} onChange={event => setCategoria(event.target.value)} id="Categoria">
                                       <option value={0}>Selecione a Categoria</option>
                                       {
                                           categoria.map((item , index) => {
                                               return(
-                                              <option>{item.nome} </option>
+                                              <option key={index} value={item.idCategoria}>{item.tipo}</option>
                                               )
-                                          }
-                                          )
+                                          })
                                       }
                                   </select> 
                               </div>
