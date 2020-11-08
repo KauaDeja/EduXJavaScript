@@ -61,7 +61,7 @@
 
 #myFooter .btn {
     color: white;
-    background-color: #d84b6b;
+    background-color: rgba(0, 0, 255, 0.459);
     border-radius: 20px;
     border: none;
     width: 150px;
@@ -74,6 +74,7 @@
 @media screen and (max-width: 767px) {
     #myFooter {
         text-align: center;
+
     }
 }
 
