@@ -8,27 +8,19 @@ import { useHistory } from 'react-router-dom';
 
 
 const Menu = () => {
-    return (
-        <div id="myMenu">
-        <Navbar collapseOnSelect expand="lg" variant= "dark">
-            <img src={logo} style={{width: '100px'}} alt="Logo EduX" />
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav className="mr-auto">
-                    <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href="/">Conquistas</Nav.Link>
-                    <Nav.Link href="/">Objetivos</Nav.Link>
-                    <Nav.Link href="/">TimeLine</Nav.Link>
-                    <Nav.Link href="/">Dicas</Nav.Link>
-                </Nav>
-                <Nav>
-                    <Nav.Link href= "/login">Login</Nav.Link>
-                    <Nav.Link href= "/cadastrar">Cadastrar</Nav.Link>
-                </Nav>
-            </Navbar.Collapse>
-        </Navbar>
-        </div>
-    )
+
+    const history = useHistory();
+
+    const sair = (event) => {
+        event.preventDefault();
+
+        localStorage.removeItem('token-edux');
+
+        history.push('/')
+    }
+
+    const renderMenu = () => {
+        const token = localStorage.getItem('token-edux');
 
     
 
@@ -96,5 +88,7 @@ return (
     </Navbar>
 )
 
+
+}
 
 export default Menu;
