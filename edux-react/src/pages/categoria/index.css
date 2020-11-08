@@ -4,7 +4,8 @@ body{
 }
 .bg{
     background-repeat: no-repeat;
-    background-image: url('https://thumbs.dreamstime.com/b/%C3%ADcones-da-escola-do-fundo-43479400.jpg');
+    background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20200313/pngtree-office-school-supplies-paper-magnifying-glass-scissors-color-lead-note-paper-image_331669.jpg');
     background-size: cover;
     background-attachment: fixed;
+    width: 100%;
 }
