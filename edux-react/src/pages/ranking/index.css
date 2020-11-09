@@ -38,6 +38,7 @@ table#alter tr td { /* Toda a tabela com fundo creme */
  #alter{
  
     position: center;
+   margin-bottom: 50px;
 }
 
 body{

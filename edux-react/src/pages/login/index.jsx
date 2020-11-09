@@ -74,7 +74,7 @@ const Login = () => {
         // email + ' - ' + senha
         //this.state.email
 
-        fetch('http://localhost:62602/api/account/login',{
+        fetch('https://localhost:44305/api/login',{
             method : 'POST',
             body : JSON.stringify({
                 email : email,
@@ -96,12 +96,13 @@ const Login = () => {
 
             let usuario = jwt_decode(data.token);
 
+            console.log(usuario.role);
             if(usuario.role === 'Professor'){
                 history.push('/professor/Dashboard');
             }else if(usuario.role === 'Instituicao'){
-                history.push('/instituicao');
+                history.push('/instituicao/dashboard');
             }else{
-                history.push('/aluno');
+                history.push('/aluno/dashboard');
             }
         })
         .catch(err => console.error(err));

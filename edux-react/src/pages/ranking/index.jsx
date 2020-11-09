@@ -40,6 +40,7 @@ const Ranking = () => {
                     <div className="row">
 
                         <div className="container">
+
                             <Form>
                                 <Form.Group controlId="formRanking">
                                     <Form.Control type="text" value={nome} onChange={event => setNome(event.target.value)} placeholder="Nome do Aluno"></Form.Control>
@@ -65,7 +66,7 @@ const Ranking = () => {
                             <tbody>
                                 <tr>
                                     <td>1°</td>
-                                    <td>Kaua</td>
+                                    <td>Lucas</td>
                                     <td>100.00</td>
                                     <td>Predador</td>
                                     <td>06/11</td>
@@ -74,13 +75,48 @@ const Ranking = () => {
                                     <td>2°</td>
                                     <td>Makoto</td>
                                     <td>99.99</td>
-                                    <td>Explorador</td>
+                                    <td>Predador</td>
                                     <td>06/11</td>
                                 </tr>
                                 <tr>
                                     <td>3°</td>
                                     <td>Caua</td>
                                     <td>98.99</td>
+                                    <td>Explorador</td>
+                                    <td>06/11</td>
+                                </tr>
+                                <tr>
+                                    <td>4°</td>
+                                    <td>Gabriel</td>
+                                    <td>98.97</td>
+                                    <td>Explorador</td>
+                                    <td>06/11</td>
+                                </tr>
+                                <tr>
+                                    <td>5°</td>
+                                    <td>Lucca</td>
+                                    <td>96.99</td>
+                                    <td>Explorador</td>
+                                    <td>06/11</td>
+                                </tr>
+                                <tr>
+                                    <td>6°</td>
+                                    <td>Gustavo</td>
+                                    <td>95.99</td>
+                                    <td>Conquistador</td>
+                                    <td>06/11</td>
+                                </tr>
+                                <tr>
+                                    <td>7°</td>
+                                    <td>Eduardo</td>
+                                    <td>94.99</td>
+                                    <td>Conquistador</td>
+                                    <td>06/11</td>
+                                </tr>
+                                <tr>
+                                    <td>8°</td>
+                                    <td>Lucio</td>
+                                    <td>93.99</td>
                                     <td>Conquistador</td>
                                     <td>06/11</td>
                                 </tr>

@@ -65,9 +65,9 @@ const Menu = () => {
                 <Nav.Link href="/objetivo">Objetivos</Nav.Link>
                 <Nav.Link href="/ranking">Ranking</Nav.Link>
                 <Nav.Link href="/dica">Dicas</Nav.Link>
-                <Nav.Link href="/dashboard">Dashboard</Nav.Link>
+                <Nav.Link href="/aluno/dashboard">Dashboard</Nav.Link>
                 <NavDropdown title={jwt_decode(token).family_name} id="basic-nav-dropdown">
-                    <NavDropdown.Item href="/dashboard">Perfil</NavDropdown.Item>
+                    <NavDropdown.Item href="/aluno/dashboard">Perfil</NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item onClick={event => sair(event)}>Sair</NavDropdown.Item>
                 </NavDropdown>

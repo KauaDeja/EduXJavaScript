@@ -1,4 +1,5 @@
 .Sobre{
+    color: white;
     display: flex;
     justify-content: center;
     padding: 70px;
@@ -7,3 +8,19 @@
 .Sobre h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.bgCurso{
+    background-repeat: no-repeat;
+    background-image: url('https://get.pxhere.com/photo/chalk-color-art-creative-drawing-design-colorful-background-education-red-white-school-blue-equipment-artistic-creativity-draw-pastel-yellow-green-closeup-pink-paint-texture-artist-toy-blackboard-childhood-kindergarten-abstract-product-close-up-macro-photography-pencil-sweetness-material-writing-implement-crayon-1443305.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+.text-center{
+    background-color: rgb(58, 56, 56);
+}
+
+
+
+
+

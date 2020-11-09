@@ -5,6 +5,9 @@ import Home from './pages/home';
 import Login from './pages/login';
 import Cadastrar from './pages/cadastrar';
 import Curso from './pages/professor/curso';
+import Turma from './pages/professor/crudTurma';
+import AlunoTurma from './pages/crudAlunoTurma';
+import DashboardAluno from './pages/aluno/dashboard';
 import Ranking from './pages/ranking';
 import Dashboard from './pages/professor/dashboard';
 import reportWebVitals from './reportWebVitals';
@@ -57,9 +60,11 @@ const routing = (
       <Route path='/cadastrar' component={Cadastrar} />
 
       <RotaPrivada path='/ranking' component={Ranking} />
-      <RotaPrivadaProfessor path='/professor/dashboard' component={Dashboard} />
+      <RotaPrivada path='/aluno/dashboard' component={DashboardAluno} />
 
+      <RotaPrivadaProfessor path='/professor/dashboard' component={Dashboard} />
       <RotaPrivadaProfessor path='/professor/curso' component={Curso} />
+      <RotaPrivadaProfessor path='/professor/turma' component={Turma} />
      
     </Switch>
   </Router>

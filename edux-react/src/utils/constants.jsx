@@ -1,1 +1,1 @@
-export const url = 'https://5f7f7f14d6aabe00166f064d.mockapi.io/api/ranking';
+export const url = 'https://localhost:44305/api';

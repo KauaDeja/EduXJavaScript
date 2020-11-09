@@ -31,7 +31,7 @@ figcaption.ratings a:hover
     }
 .emphasis:hover 
 {
-    border-top: 4px solid #1abc9c;
+    border-top: 4px solid #d3cf04;
     }
 .emphasis h2
 {
@@ -39,7 +39,7 @@ figcaption.ratings a:hover
     }
 span.tags 
 {
-    background: #1abc9c;
+    background: #ddda0b;
     border-radius: 2px;
     color: #f5f5f5;
     font-weight: bold;
@@ -86,11 +86,6 @@ span.tags
         max-height: 200px;
    
     }
-
-    body{
-        height: 100%;
-        margin: 0;
-    }
     .bgDashboard{
         background-repeat: no-repeat;
         background-image: url('https://veja.abril.com.br/wp-content/uploads/2018/03/educac3a7c3a3o.jpg');
@@ -104,3 +99,5 @@ span.tags
     .card{
         color: black;
     }
+
+    

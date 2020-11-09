@@ -6,7 +6,7 @@ import './index.css'
 const Rodape = () => {
     return (
 
-        <div>
+        <div className="menuRodape">
 
             <footer id="myFooter">
                 <div class="container">
