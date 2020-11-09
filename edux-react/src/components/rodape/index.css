@@ -1,7 +1,6 @@
 #myFooter {
     background-color:  rgb(25, 78, 102);
     color: white;
-    padding-top: 30px;
 }
 
 #myFooter .footer-copyright {
@@ -11,13 +10,17 @@
     text-align: center;
 }
 
+#myFooter small{
+    font-weight: bold;
+}
+
 #myFooter .row {
     margin-bottom: 60px;
 }
 
 #myFooter .navbar-brand {
     margin-top: 45px;
-    height: 65px;
+    height: 40px;
 }
 
 #myFooter .footer-copyright p {

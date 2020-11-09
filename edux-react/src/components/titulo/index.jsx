@@ -14,6 +14,7 @@ const Titulo = ({ titulo, chamada }) => {
                 </p>
             </div>
         </Jumbotron>
+        
     )
 
 }

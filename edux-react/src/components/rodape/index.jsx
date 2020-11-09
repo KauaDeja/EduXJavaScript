@@ -46,7 +46,7 @@ const Rodape = () => {
                     <div className="equipe">
                         <h1>Blue Screen</h1>
                     </div>
-                    <small>Desenvolvido por <a href="https://github.com/KauaDeja">Kaua Deja, Lucca Gomes, Gabriel Maia, Gabriel Bejamin e Matheus Fuscaldi</a></small>
+                    <small>Desenvolvido por <a href="https://github.com/KauaDeja">Kaua Deja, Lucca Gomes, Gabriel Maia, Gabriel Benjamin e Matheus Fuscaldi</a></small>
                 </div>
             </footer>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+
 import Home from './pages/home';
 import Login from './pages/login';
 import Cadastrar from './pages/cadastrar';
@@ -10,6 +11,9 @@ import AlunoTurma from './pages/crudAlunoTurma';
 import DashboardAluno from './pages/aluno/dashboard';
 import Ranking from './pages/ranking';
 import Dashboard from './pages/professor/dashboard';
+import Objetivo from './pages/aluno/objetivo';
+import ObjetivoCRUD from './pages/professor/objetivoCRUD'
+import Cadastro from './pages/cadastro';
 import reportWebVitals from './reportWebVitals';
 import jwt_decode from 'jwt-decode';
 
@@ -61,7 +65,9 @@ const routing = (
 
       <RotaPrivada path='/ranking' component={Ranking} />
       <RotaPrivada path='/aluno/dashboard' component={DashboardAluno} />
+      <RotaPrivada path='/aluno/objetivo' component={Objetivo} />
 
+      <RotaPrivadaProfessor path='/professor/objetivoCRUD' component={ObjetivoCRUD} />
       <RotaPrivadaProfessor path='/professor/dashboard' component={Dashboard} />
       <RotaPrivadaProfessor path='/professor/curso' component={Curso} />
       <RotaPrivadaProfessor path='/professor/turma' component={Turma} />

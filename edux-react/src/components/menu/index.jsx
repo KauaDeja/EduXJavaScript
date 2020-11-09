@@ -36,7 +36,7 @@ const Menu = () => {
         return (
             <Nav>
                 <Nav.Link href="/professor/curso">Gerenciar Cursos</Nav.Link>
-                <Nav.Link href="/professor/objetivo">Objetivos</Nav.Link>
+                <Nav.Link href="/professor/objetivoCRUD">Objetivos</Nav.Link>
                 <Nav.Link href="/professor/turma">Gerenciar Turmas</Nav.Link>
                 <Nav.Link href="/professor/categorias">Gerenciar Categorias</Nav.Link>
                 <Nav.Link href="/professor/dashboard">DashBoard</Nav.Link>
@@ -62,7 +62,7 @@ const Menu = () => {
     } else {
         return (
             <Nav>
-                <Nav.Link href="/objetivo">Objetivos</Nav.Link>
+                <Nav.Link href="/aluno/objetivo">Objetivos</Nav.Link>
                 <Nav.Link href="/ranking">Ranking</Nav.Link>
                 <Nav.Link href="/dica">Dicas</Nav.Link>
                 <Nav.Link href="/aluno/dashboard">Dashboard</Nav.Link>
