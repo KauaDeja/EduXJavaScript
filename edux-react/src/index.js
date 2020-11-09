@@ -11,9 +11,10 @@ import AlunoTurma from './pages/crudAlunoTurma';
 import DashboardAluno from './pages/aluno/dashboard';
 import Ranking from './pages/ranking';
 import Dashboard from './pages/professor/dashboard';
+import Instituicao from './pages/instituicao/dashboard';
 import Objetivo from './pages/aluno/objetivo';
-import ObjetivoCRUD from './pages/professor/objetivoCRUD'
-import Cadastro from './pages/cadastro';
+import ObjetivoCRUD from './pages/professor/objetivoCRUD';
+import Categoria from './pages/professor/categoria';
 import reportWebVitals from './reportWebVitals';
 import jwt_decode from 'jwt-decode';
 
@@ -59,7 +60,8 @@ const RotaPrivadaProfessor = ({component : Component, ...rest}) => (
 const routing = (
   <Router>
     <Switch>
-      <Route exact path= '/' component={Home} /> 
+
+      <Route exact  path='/' component={Home} />
       <Route path='/login' component={Login} />
       <Route path='/cadastrar' component={Cadastrar} />
 
@@ -67,10 +69,13 @@ const routing = (
       <RotaPrivada path='/aluno/dashboard' component={DashboardAluno} />
       <RotaPrivada path='/aluno/objetivo' component={Objetivo} />
 
+      <RotaPrivadaProfessor path='/professor/categorias' component={Categoria} />
       <RotaPrivadaProfessor path='/professor/objetivoCRUD' component={ObjetivoCRUD} />
       <RotaPrivadaProfessor path='/professor/dashboard' component={Dashboard} />
       <RotaPrivadaProfessor path='/professor/curso' component={Curso} />
       <RotaPrivadaProfessor path='/professor/turma' component={Turma} />
+
+      <RotaPrivadaInstituicao path='/instituicao/dashboard' component={Instituicao} />
      
     </Switch>
   </Router>

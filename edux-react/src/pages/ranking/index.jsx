@@ -31,7 +31,7 @@ const Ranking = () => {
         <div>
             <Menu />
             <Titulo titulo="Classificação Geral" chamada={<h2>Colocação dos melhores alunos</h2>} />
-            <div className="bg">
+            <div className="bgrank">
 
                 <div className="container" >
                     <div className="imagemFundo">
