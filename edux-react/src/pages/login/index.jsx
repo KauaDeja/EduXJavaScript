@@ -4,7 +4,6 @@ import Rodape from '../../components/rodape';
 import { Container, Form, Button} from 'react-bootstrap';
 import './index.css'
 import logo from '../../assets/img/logo_2.png';
-import fundo from '../../assets/img/03-1024x683.jpg';
 
 
 const Login = () => {

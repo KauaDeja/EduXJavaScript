@@ -2,6 +2,7 @@
 import React from 'react'
 import {Jumbotron} from 'react-bootstrap';
 import './index.css';
+import logo from '../../assets/img/Estudantes.jpg'
 
 const Titulo = ({titulo, chamada}) => {
 
