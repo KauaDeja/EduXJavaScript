@@ -2,10 +2,12 @@
     display: flex;
     justify-content: center;
     padding: 70px;
+    color: black;
 }
 
 .Sobre h1 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: '123Sketch.ttf';
+    color: black;
 }
 .sobre_img{
     display: flex;

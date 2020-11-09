@@ -1,6 +1,7 @@
 #myFooter {
     background-color:  rgb(25, 78, 102);
     color: white;
+    margin-top: 42px;
 }
 
 #myFooter .footer-copyright {

@@ -132,7 +132,7 @@ const Curso = () => {
                         <Table variant="dark" bordered className="table">
                             <thead>
                                 <tr>
-                                    <th scope="col">#</th>
+                                    <th scope="col">IdCurso</th>
                                     <th scope="col">Cursos</th>                                 
                                     <th scope="col">Instituição</th>
                                     <th scope="col">Ações</th>
