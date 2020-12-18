@@ -74,7 +74,7 @@ const Login = () => {
         // email + ' - ' + senha
         //this.state.email
 
-        fetch('https://localhost:44305/api/login',{
+        fetch('https://localhost:5001/api/login',{
             method : 'POST',
             body : JSON.stringify({
                 email : email,

@@ -10,8 +10,10 @@ html,
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: rgb(209, 164, 179);
-  background: image("03-1024x683.jpg");
+  background-color: #230742;
+  color: white;
+  border: 2px solid #6681ea;
+
 }
 
 .form-signin {
@@ -42,4 +44,19 @@ html,
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+.cordefundo{
+  background-repeat: no-repeat;
+  background-image: url('https://media.istockphoto.com/vectors/science-and-knowledge-seamless-wallpaper-vector-id590176812');
+  background-size: cover;
+  background-attachment: fixed;
+  
+}
+.tituloh2{
+  justify-content: center;
+  text-align: center;
+
+}
+.text-center{
+  margin-top: 30px;
 }

@@ -66,6 +66,9 @@ const Curso = () => {
 
         fetch(url + '/curso/' + event.target.value, {
             method: 'GET',
+            headers:{
+                'content-type'  : 'application-json'
+            }
 
         })
 
@@ -73,7 +76,6 @@ const Curso = () => {
             .then(dado => {
                 setId(dado.idCurso);
                 setTitulo(dado.titulo);
-                setInstituicao(dado.idInstituicao);
 
             })
             .catch(err => console.error(err));
@@ -92,8 +94,7 @@ const Curso = () => {
             .then(response => response.json)
             .then(dados => {
                 alert('Seu curso foi removido');
-
-
+                
                 listar();
             })
 
@@ -132,7 +133,6 @@ const Curso = () => {
                         <Table variant="dark" bordered className="table">
                             <thead>
                                 <tr>
-                                    <th scope="col">IdCurso</th>
                                     <th scope="col">Cursos</th>                                 
                                     <th scope="col">Instituição</th>
                                     <th scope="col">Ações</th>
@@ -143,7 +143,6 @@ const Curso = () => {
                                     cursos.map((item, index) => {
                                         return (
                                             <tr key={index}>
-                                                <td>{item.idCurso}</td>
                                                 <td>{item.titulo}</td>
                                                 <td>{item.idInstituicao}</td>
                                                

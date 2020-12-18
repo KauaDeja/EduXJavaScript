@@ -7,45 +7,60 @@ import './index.css'
 import { Form, Button, Container, Card, Row, FormLabel, Col, Table } from 'react-bootstrap';
 import { url } from '../../../utils/constants';
 
+//Feito by: Gabriel Maia dos Santos
 const Turma = () => {
-
-    const [id, setId] = useState(0);
+    const [id,  setId] = useState(0);
     const [descricao,  setDescricao] = useState('');
-    const [idCurso, setIdCurso] = useState('');
     const [Turma, setTurma] = useState([])
+    const [curso, setCurso] = useState([]);
+    const [idCurso, setIdCurso] = useState('');
 
     useEffect(() => {
         listar();
+        listarCursos();
     }, [])
 
-    const Cadastrar = (event) => {
-        event.preventDefault();
+     const listarCursos = () => {
+        fetch(url + '/curso')
+            .then(response => response.json())
+            .then(dados => {
+                setCurso(dados.data);
 
-        const Turma = {
-           descricao: descricao,
-           idCurso: "dc65a8d7-5497-4761-b9e8-048695bbd389"
-        }
+                limparCampos();
 
-        let method = (id === 0 ? 'POST' : 'PUT');
-        let urlRequest = (id === 0 ? `${url}/turma` :  `${url}/turma/${id}`);
-
-        fetch(urlRequest, {
-            method : method,
-            body : JSON.stringify(Turma),
-            headers : {
-                'content-type' : 'application/json',
+                console.log(dados.data);
+            })
+            .catch(err => console.error(err));
+        }  
+        const Cadastrar = (event) => {
+            event.preventDefault();
+    
+            const Turma = {
+                descricao : descricao,
+                idCurso : idCurso,
+                curso : curso
             }
-        })
-        .then(response => response.json())
-        .then(dados => {
-            alert('Turma salva');
-
-            listar();
-        })
-        .catch(err => console.error(err))
-    }
-
-
+    
+            let method = (id === 0 ? 'POST' : 'PUT');
+            let urlRequest = (id === 0 ? `${url}/turma` : `${url}/turma/${id}`);
+    
+            fetch(urlRequest, {
+                method: method,
+                body: JSON.stringify(Turma),
+                headers: {
+                    'content-type': 'application/json',
+    
+                }
+            })
+                .then(response => response.json)
+                .then(dados => {
+                    alert('Sua Turma foi salva com sucesso!')
+    
+                    listar();
+                })
+                .catch(err => console.error(err));
+    
+        }
     const listar = () => {
 
         fetch(`${url}/turma`)
@@ -64,15 +79,18 @@ const Turma = () => {
 
         fetch(url + '/turma/' + event.target.value, {
             method : 'GET',
-            headers : {
-                'authorization' : 'Bearer ' + localStorage.getItem('token-edux')
+            headers: {
+                'content-type': 'application/json',
+
             }
         })
         .then(response => response.json())
         .then(dado => {
             setId(dado.id);
             setDescricao(dado.descricao);
+
         })
+        listar();
     }
 
 
@@ -93,8 +111,8 @@ const Turma = () => {
     }
 
     const limparCampos = () => {
-        setId(0);
         setDescricao('');
+        setIdCurso(0);
 
     }
     
@@ -120,6 +138,18 @@ const Turma = () => {
                                     <Form.Text className="text-muted">
                                     </Form.Text>
                                 </Form.Group>
+                                <Form.Group controlId="formBasicPerfil">
+                        <Form.Label>Curso da Sala</Form.Label>
+                        <Form.Control as="select" type="text" placeholder="Informe o tipo de curso" value={idCurso} onChange={event => setIdCurso(event.target.value)} >
+                            {
+                                curso.map((item, index) => {
+                                    return(
+                                        <option value={item.curso}>{item.titulo}</option>
+                                    )
+                                })
+                            }
+                        </Form.Control>            
+                    </Form.Group>
                                 <Button variant="success" type="submit">Salvar</Button>
                             </Form>
                         </Card.Body>
@@ -127,11 +157,12 @@ const Turma = () => {
 
 
                     <Card>
-                    <Table  bordered className="table">
+                    <Table  bordered className="table-dark">
                         <thead>
                             <tr>
-                                <th scope="col">#</th>
                                 <th scope="col">Descrição</th>
+                                <th scope="col">Curso</th>
+                                <th scope="col">Ações</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -139,10 +170,8 @@ const Turma = () => {
                                 Turma.map((item, index) => {
                                     return (
                                         <tr key={index}>
-                                        
-                                        <td>{item.idTurma}</td>
                                         <td>{item.descricao}</td>
-                                        <td>{item.idCurso}</td>
+                                        <td>{item.curso}</td>
                                         <td>
                                             <Button type="button" variant="warning" value={item.idTurma} onClick={ event => editar(event)}>Editar</Button>
                                             <Button type="button" variant="danger" value={item.idTurma} style={{ marginLeft : '30px'}} onClick={ event => remover(event)}>Remover</Button>
@@ -151,8 +180,9 @@ const Turma = () => {
                                 )
                             })
                         }
-                            
                         </tbody>
+                            
+                      
                     </Table>
 
                 </Card>

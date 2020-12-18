@@ -1,14 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Menu from '../../../components/menu';
 import Rodape from '../../../components/rodape';
 import Titulo from '../../../components/titulo';
 import './index.css';
-import { Container } from 'react-bootstrap';
+import { Container, Card } from 'react-bootstrap';
+import {url} from '../../../utils/constants';
+import jwt_decode from "jwt-decode";
 
 
 const DashboardAluno = () => {
-    const [turma, setTurmas] = useState([]);
-    const [Idturma, setIdTurmas] = useState([]);
+    const [nomeUsuario, setNomeUsuario] = useState('');
+    const [emailUsuario, setEmailUsuario] = useState('');
+
+    useEffect(() => {
+        listarUsuarioLogado()
+    }, []);
+
+    const listarUsuarioLogado = () => {
+        fetch(url + '/usuario')
+            .then(response => response.json())
+            .then(dados => {
+                localStorage.getItem('token-edux');
+                let token = localStorage.getItem('token-edux');
+                let NomeUsuarioLogado = jwt_decode(token).nameid;
+                let EmailUsuarioLogado = jwt_decode(token).email;
+
+                
+                setNomeUsuario(NomeUsuarioLogado);
+                setEmailUsuario(EmailUsuarioLogado);
+                console.log(NomeUsuarioLogado);
+            })
+            .catch(err => console.error(err));
+        }
+
     return (
         <div>
 
@@ -26,7 +50,9 @@ const DashboardAluno = () => {
                                             <figure class="avatar">
                                                 <img src="https://avatarfiles.alphacoders.com/184/184671.jpg" alt="Avatar" class="img-circle img-responsive" id="imagem" />
                                             </figure>
-                                            <h2>Gustavo</h2>
+
+                                                <h1>{nomeUsuario}</h1>
+                                                <h4 className='emailDashBoard'>Email: {emailUsuario}</h4>
                                             <p><strong>Sobre: </strong> 15 anos, Estudante de humanas</p>
                                             <p><strong>Hobbies: </strong> Jogar futebol </p>
                                             <p><strong>Skills: </strong>
