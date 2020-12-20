@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "lottie-react": "^2.1.0",
     "react-awesome-slider": "^4.1.0"
   }
 }

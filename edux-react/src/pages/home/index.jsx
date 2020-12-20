@@ -6,6 +6,8 @@ import 'react-awesome-slider/dist/styles.css';
 import Menu from '../../components/menu';
 import Footer from '../../components/rodape';
 import { Carousel, Jumbotron, Button, Container, Row, Col, Card } from 'react-bootstrap';
+import Lottie from 'lottie-react'
+
 
 //add imagens de crianças
 import img_crianca from '../../assets/img/criança.jpg'
@@ -19,7 +21,12 @@ import img_fusca from '../../assets/img/fusca.jpg'
 import img_maia from '../../assets/img/maia.jpg'
 import img_benjamin from '../../assets/img/benjamin.jpg'
 import img_lucca from '../../assets/img/lucca.jpg'
-import logo from '../../assets/img/logo.png'
+
+import Logo from '../../assets/img/logo.png'
+import Logoo from '../../assets/img/Logoooo.png'
+
+//add animações
+import animation from '../../assets/img/animation.json'
 
 
 //Feito by: Gabriel Maia dos Santos
@@ -66,6 +73,7 @@ const Home = () => {
 
         <div className="nos1">
           <AwesomeSlider className="Banner2">
+            <div data-src={Logoo}/>
             <div data-src={img_maia} />
             <div data-src={img_kaua} />
             <div data-src={img_fusca} />
@@ -73,6 +81,7 @@ const Home = () => {
             <div data-src={img_lucca} />
           </AwesomeSlider>
           <div className="coluna">
+        <Lottie animationData={animation} style={{width: 600, alignSelf:'center'}} />
             <h1 style={{color: 'black'}}>Quem somos</h1>
             <p className="texto1" style={{color:'black'}}>Com o intuito de trazer uma experiência gamificada para os alunos, os docentes Diego e Paulo propuseram elaborar um projeto chamado EduX, que visa atender os 4 arquétipos de jogador, segundo Bartle,  para trazer maior imersão para os alunos e também fácil entendimento sobre o plano de curso de cada especialidade, assim como seus objetivos a serem alcançados.
 </p>
@@ -80,7 +89,6 @@ const Home = () => {
 
           </div>
         </div>
-        <img className="logo" src={logo} alt="Logo blue Screen" />
           <Footer></Footer>
 
       </body>

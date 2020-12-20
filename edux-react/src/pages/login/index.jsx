@@ -17,6 +17,10 @@ import { useHistory } from "react-router-dom";
 
 import jwt_decode from "jwt-decode";
 
+import Lottie from 'lottie-react';
+
+import animation from '../../assets/img/animationnn.json';
+
 function Copyright() {
     return (
         <Typography variant="body2" color="textSecondary" align="center">
@@ -74,7 +78,7 @@ const Login = () => {
         // email + ' - ' + senha
         //this.state.email
 
-        fetch('https://localhost:5001/api/login',{
+        fetch('http://192.168.0.21:5000/api/login',{
             method : 'POST',
             body : JSON.stringify({
                 email : email,
@@ -116,8 +120,8 @@ const Login = () => {
                 <Menu/>
                 <Grid container component="main" className={classes.root}>
                     <CssBaseline />
-                    <Grid item xs={false} sm={4} md={7} className={classes.image} />
-                    <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+                    <Lottie animationData={animation} style={{width: 1000}} />
+                    <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square style={{marginLeft: 120}}>
                         <div className={classes.paper}>
                             <img src={logo}  alt="Logo EduX" />
                            
